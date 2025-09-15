@@ -28,7 +28,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css" />
-    <script type="text/javascript" src="js/main.js"></script>
     
     <!-- Structured Data for Person/Professional -->
     <script type="application/ld+json">
@@ -69,7 +68,102 @@
         .animate {
             opacity: 1;
             transform: translateY(0);
-        }                        
+        }
+        
+        /* Glowing gradient border animation for profile image */
+        .glowing-border {
+            position: relative;
+        }
+        .glowing-border::before {
+            content: "";
+            position: absolute;
+            inset: -4px;
+            border-radius: inherit;
+            padding: 4px;
+            background: linear-gradient(45deg, #ff5e00, #ff9500, #ffce00, #ff5e00);
+            background-size: 400% 400%;
+            animation: glowing-animation 6s ease-in-out infinite;
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+            filter: blur(4px) brightness(1.2);
+        }
+        .glowing-border:hover::before {
+            opacity: 1;
+            filter: blur(6px) brightness(1.5);
+        }
+        
+        /* Button styles with glowing effect */
+        .glowing-button {
+            position: relative;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            overflow: visible;
+            z-index: 1;
+            animation: subtle-float 4s ease-in-out infinite;
+        }
+        
+        @keyframes subtle-float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-2px); }
+        }
+        .glowing-button::before {
+            content: "";
+            position: absolute;
+            inset: -5px;
+            border-radius: inherit;
+            background: linear-gradient(45deg, #ff5e00, #ff9500, #ffce00, #ff5e00);
+            background-size: 400% 400%;
+            animation: glowing-animation 2s ease-in-out infinite;
+            opacity: 0.7;
+            transition: opacity 0.3s ease, filter 0.3s ease;
+            z-index: -1;
+            filter: blur(8px) brightness(1.2);
+        }
+        .glowing-button:hover {
+            transform: scale(1.05) translateY(-3px);
+            animation: float-animation 3s ease-in-out infinite, glowing-animation 2s ease-in-out infinite;
+            box-shadow: 0 10px 20px rgba(255, 94, 0, 0.2);
+        }
+        .glowing-button:hover::before {
+            opacity: 0.8;
+            filter: blur(6px) brightness(1.3);
+        }
+        
+        @keyframes glowing-animation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        @keyframes float-animation {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+            100% { transform: translateY(0); }
+            100% { background-position: 0% 50%; }
+        }
+        
+        
+        /* Enhanced flame-like glow effect */
+        .flame-glow {
+            box-shadow: 0 0 15px 5px rgba(255, 140, 0, 0.7);
+            transition: box-shadow 0.3s ease;
+        }
+        .flame-glow:hover {
+            box-shadow: 0 0 0px 5px rgba(255, 140, 0, 0.9), 0 0 40px 15px rgba(255, 100, 0, 0.5);
+        }
+        .flame-like {
+            box-shadow: 0 0 15px 5px rgb(59, 130, 246);
+            transition: box-shadow 0.3s ease;
+        }
+        .flame-like:hover {
+            /* box-shadow:  0 0 40px 15px rgba(255, 100, 0, 0.5); */
+            transition: box-shadow 0.3s ease;
+            transform: scale(1.05);
+            transition: ease-in-out;
+        }
+
     </style>
 </head>
 <body class="bg-gray-50 font-sans">
@@ -117,19 +211,16 @@
                         I create beautiful, functional websites that help businesses grow and succeed online.
                     </p>
                     <div class="flex space-x-4">
-                        <!-- <div id="poda" class="glow darkBorderBg white border" aria-hidden="true"> -->
-                            <a href="#contact" class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:opacity-90 transition shadow-lg">
-                                I need a site
-                            </a>
-                        <!-- </div> -->
+                        <a href="#contact" class="flame-like bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-lg font-medium transition">
+                            I need a site
+                        </a>
                         <a href="#work" class="border border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition">
                             View My Work
                         </a>
                     </div>
                 </div>
                 <div class="md:w-1/2 flex justify-center animate-on-scroll">
-                    <div class="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full overflow-hidden shadow-xl">
-                        <!-- Replace with your image -->
+                    <div class="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full shadow-xl transition glowing-button flame-glow">
                         <div class="absolute inset-0 flex items-center justify-center">
                             <!-- <i class="fas fa-user text-6xl text-blue-500"></i> -->
                              <img src="img/callme-DJay.webp" alt="David Joseph - Professional Front-End Web Developer" class="w-full h-full object-cover rounded-full" loading="eager">
@@ -149,10 +240,9 @@
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/3 mb-8 md:mb-0 flex justify-center animate-on-scroll">
                     <div class="w-48 h-48 md:w-64 md:h-64 bg-gradient-to-br from-blue-100 to-purple-100 rounded-lg overflow-hidden shadow-lg">
-                        <!-- Replace with your image -->
                         <div class="w-full h-full flex items-center justify-center">
                             <!-- <i class="fas fa-user-tie text-5xl text-blue-500"></i> -->
-                            <img src="img/callme-DJay1.jpg" alt="David Joseph" class="w-full h-full object-cover rounded-lg">
+                            <img src="img/callme-DJay1.jpg" alt="David Joseph" class="w-full h-full object-cover rounded-lg glowing-button">
                         </div>
                     </div>
                 </div>
@@ -595,5 +685,8 @@
             });
         });
     </script>
+    
+    <!-- Add main.js script at the end of body for proper DOM loading -->
+    <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
