@@ -1,0 +1,1 @@
+// document.classList(".view").addEventListener('click', display)
