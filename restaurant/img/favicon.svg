@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <style>
+    .bg { fill: #e67e22; }
+    .plate { fill: #ffffff; stroke: #f39c12; stroke-width: 1; }
+    .fork { fill: #7f8c8d; }
+    .knife { fill: #7f8c8d; }
+  </style>
+  <g>
+    <!-- Background -->
+    <circle class="bg" cx="16" cy="16" r="16"/>
+    
+    <!-- Plate -->
+    <circle class="plate" cx="16" cy="16" r="10"/>
+    
+    <!-- Fork -->
+    <path class="fork" d="M12,8 L12,16 M10,8 L10,14 M14,8 L14,14 M10,14 C10,16 14,16 14,14 L12,24"/>
+    
+    <!-- Knife -->
+    <path class="knife" d="M22,8 C20,8 18,12 18,16 L18,24 M18,16 C18,16 20,16 22,14"/>
+  </g>
+</svg>

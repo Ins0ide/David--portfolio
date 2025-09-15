@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+  <style>
+    .background { fill: #f5f5f5; }
+    .face { fill: #ffe0b2; }
+    .hair { fill: #3e2723; }
+    .shirt { fill: #e74c3c; }
+  </style>
+  <g>
+    <!-- Background Circle -->
+    <circle class="background" cx="30" cy="30" r="30"/>
+    
+    <!-- Shirt/Shoulders -->
+    <path class="shirt" d="M10,60 L10,45 C10,35 20,30 30,30 C40,30 50,35 50,45 L50,60 Z"/>
+    
+    <!-- Face -->
+    <circle class="face" cx="30" cy="25" r="15"/>
+    
+    <!-- Hair -->
+    <path class="hair" d="M18,15 C20,8 40,8 42,15 C44,22 42,25 42,25 L42,18 C42,18 38,22 30,22 C22,22 18,18 18,18 L18,25 C18,25 16,22 18,15 Z"/>
+    
+    <!-- Eyes -->
+    <circle fill="#333" cx="24" cy="22" r="2"/>
+    <circle fill="#333" cx="36" cy="22" r="2"/>
+    
+    <!-- Smile -->
+    <path fill="none" stroke="#333" stroke-width="1.5" d="M23,28 C26,32 34,32 37,28"/>
+  </g>
+</svg>

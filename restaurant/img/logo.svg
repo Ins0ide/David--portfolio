@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="150" height="50" viewBox="0 0 150 50">
+  <style>
+    .logo-text { font-family: 'Arial', sans-serif; font-weight: bold; }
+    .primary { fill: #e67e22; }
+    .secondary { fill: #333333; }
+  </style>
+  <g>
+    <path class="primary" d="M25,10 C15,10 10,20 10,25 C10,35 20,40 25,40 C30,40 40,35 40,25 C40,20 35,10 25,10 Z M25,35 C21,35 15,31 15,25 C15,21 18,15 25,15 C32,15 35,21 35,25 C35,31 29,35 25,35 Z"/>
+    <circle class="primary" cx="25" cy="25" r="5"/>
+    <path class="secondary" d="M55,15 L55,35 L60,35 L60,27 L65,27 C70,27 73,24 73,21 C73,18 70,15 65,15 L55,15 Z M60,19 L64,19 C66,19 68,19 68,21 C68,23 66,23 64,23 L60,23 L60,19 Z"/>
+    <path class="secondary" d="M80,15 L80,35 L95,35 L95,31 L85,31 L85,27 L93,27 L93,23 L85,23 L85,19 L95,19 L95,15 L80,15 Z"/>
+    <path class="secondary" d="M105,15 L105,35 L110,35 L110,28 L112,28 L117,35 L123,35 L117,27 C120,26 122,24 122,21 C122,17 119,15 115,15 L105,15 Z M110,19 L114,19 C116,19 117,20 117,21 C117,22 116,24 114,24 L110,24 L110,19 Z"/>
+    <path class="secondary" d="M130,15 L130,35 L145,35 L145,31 L135,31 L135,15 L130,15 Z"/>
+  </g>
+</svg>
