@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+    	<meta name="description" content="Discover our exquisite cuisine restaurant offering breakfast, lunch, dinner, and desserts. Book a table or order online for a delightful dining experience.">
+    	<meta name="keywords" content="restaurant, cuisine, fine dining, breakfast, lunch, dinner, dessert, book table, order online">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="robots" content="index, follow">
+		<meta name="author" content="Cuisine Restaurant">
+		<meta property="og:title" content="Welcome to Our Cuisine Restaurant">
+		<meta property="og:description" content="Discover our exquisite cuisine restaurant offering breakfast, lunch, dinner, and desserts. Book a table or order online.">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="https://www.cuisinerestaurant.com">
+		<meta property="og:image" content="img/restaurant-preview.jpg">
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:title" content="Welcome to Our Cuisine Restaurant">
+		<meta name="twitter:description" content="Discover our exquisite cuisine restaurant offering breakfast, lunch, dinner, and desserts.">
+		<meta name="twitter:image" content="img/restaurant-preview.jpg">
+		<meta name="geo.region" content="US">
+		<meta name="geo.placename" content="New York">
+		<meta name="language" content="English">
+		
+		<title>Cuisine Restaurant | Fine Dining Experience</title>
+		
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+		<link rel="icon" href="favicon.ico" type="image/x-icon">
+		<link rel="canonical" href="https://www.cuisinerestaurant.com">
+		<!-- Preload critical assets -->
+		<link rel="preload" href="js/main.js" as="script">
+		<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+	</head>
+	<body>
+		<header class="site-header">
+			<div class="container header-container">
+				<a href="index.html" class="logo">
+					<img src="img/logo.svg" alt="Cuisine Restaurant Logo" width="150" height="50" loading="eager">
+					<!-- <span class="logo-text">Cuisine</span> -->
+				</a>
+
+				<nav class="header-nav" aria-label="Main Navigation">			
+					<ul class="nav-list">
+						<li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+						<li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+						<li class="nav-item"><a href="menu.html" class="nav-link">Menu</a></li>
+						<li class="nav-item"><a href="order.html" class="nav-link">Order Now</a></li>
+						<li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+						<li class="nav-item"><a href="location.html" class="nav-link">Location</a></li>
+					</ul>				
+				</nav>
+				<div class="header-actions">
+					<a href="cart.html" class="action-btn" aria-label="View your cart">
+						<i class="fas fa-shopping-cart"></i>
+					</a>
+					<div class="search-container headerEnd">
+						<button class="search-toggle" aria-label="Open search">
+							<img src="img/search-icon.svg" alt="Search icon" width="20" height="20" loading="eager">
+						</button>
+					</div>
+				</div>
+				<button class="mobile-menu-toggle mobile-menu-btn" aria-label="Toggle mobile menu" data-toggle="menu">
+					<i class="fas fa-bars"></i>
+				</button>
+			</div>
+		</header>
+		<main>
+			<section class="hero-section" id="hero">
+				<div class="container">
+					<h1 class="hero-title animate-on-scroll fadeIn">Welcome <br>To Our Cuisine <br>Restaurant</h1>
+					<form class="search-form animate-on-scroll" action="search.html" method="get" role="search">
+						<div class="search-container">
+							<input type="search" name="query" placeholder="Search our menu..." aria-label="Search our menu">
+							<button type="submit" class="location-btn">Find Location</button>
+						</div>
+					</form>
+					<div class="stats-container animate-on-scroll">
+						<div class="stat-item fadeIn">
+							<span class="stat-number">252k</span>
+							<span class="stat-label">Happy Customers</span>
+						</div>
+						<div class="stat-item fadeIn">
+							<span class="stat-number">62k</span>
+							<span class="stat-label">Daily Orders</span>
+						</div>
+						<div class="stat-item fadeIn">
+							<span class="stat-number">55k</span>
+							<span class="stat-label">Positive Reviews</span>
+						</div>
+					</div>
+				</div>
+			</section>	
+		</main>
+		<section id="about" class="about-section">
+			<div class="container">
+				<div class="about-content">
+					<span class="section-tag animate-on-scroll">About Us</span>
+					<h2 class="section-title animate-on-scroll">Discover Our Restaurant Story</h2>
+					<div class="about-text animate-on-scroll">
+						<p>Welcome to Cuisine Restaurant, where culinary excellence meets warm hospitality. Our journey began with a passion for creating memorable dining experiences through exceptional food, attentive service, and a welcoming atmosphere.</p>
+						<p>Every dish at our restaurant is crafted with care using the finest locally-sourced ingredients, combining traditional techniques with innovative flavors to delight your palate and create unforgettable moments.</p>
+					</div>
+					<a href="menu.html" class="btn primary-btn animate-on-scroll" download="cuisine-restaurant-menu.pdf">Download Menu</a>
+				</div>
+				<div class="about-image animate-on-scroll">
+					<svg xmlns="http://www.w3.org/2000/svg" width="500" height="350" viewBox="0 0 500 350" class="lazy-load">
+					<style>
+						.bg { fill: #f5f5f5; }
+						.wall { fill: #e0e0e0; }
+						.floor { fill: #d7ccc8; }
+						.table { fill: #795548; }
+						.chair { fill: #8d6e63; }
+						.lamp { fill: #ffeb3b; }
+						.window { fill: #bbdefb; }
+						.plant { fill: #66bb6a; }
+					</style>
+					<rect class="bg" width="500" height="350"/>
+					
+					<!-- Walls and Floor -->
+					<rect class="wall" x="0" y="0" width="500" height="250"/>
+					<rect class="floor" x="0" y="250" width="500" height="100"/>
+					
+					<!-- Windows -->
+					<rect class="window" x="50" y="50" width="100" height="150"/>
+					<rect class="window" x="350" y="50" width="100" height="150"/>
+					
+					<!-- Tables -->
+					<rect class="table" x="100" y="260" width="100" height="60" rx="5"/>
+					<rect class="table" x="300" y="260" width="100" height="60" rx="5"/>
+					
+					<!-- Chairs -->
+					<rect class="chair" x="80" y="270" width="30" height="30" rx="5"/>
+					<rect class="chair" x="190" y="270" width="30" height="30" rx="5"/>
+					<rect class="chair" x="280" y="270" width="30" height="30" rx="5"/>
+					<rect class="chair" x="390" y="270" width="30" height="30" rx="5"/>
+					
+					<!-- Lamps -->
+					<circle class="lamp" cx="150" cy="100" r="20"/>
+					<circle class="lamp" cx="350" cy="100" r="20"/>
+					
+					<!-- Plants -->
+					<circle class="plant" cx="50" y="240" r="15"/>
+					<circle class="plant" cx="450" y="240" r="15"/>
+				</svg>
+				</div>
+			</div>
+		</section>
+		<section id="menu" class="menu-section">
+			<div class="container">
+				<div class="section-header text-center">
+					<span class="section-tag">Order Online Now</span>
+					<h2 class="section-title">Our Specialty Cuisine</h2>
+					<nav class="menu-nav" aria-label="Menu Categories">
+					<ul class="menu-categories">
+						<li><button class="menu-category active" data-category="all">All</button></li>
+						<li><button class="menu-category" data-category="breakfast">Breakfast</button></li>
+						<li><button class="menu-category" data-category="lunch">Lunch</button></li>
+						<li><button class="menu-category" data-category="dinner">Dinner</button></li>
+						<li><button class="menu-category" data-category="dessert">Dessert</button></li>
+						<li><button class="menu-category" data-category="shake">Shake</button></li>
+					</ul>
+				</nav>
+				</div>
+				
+				<div class="menu-items-container">
+					<div class="menu-row">
+						<article class="menu-item" data-category="breakfast">
+							<div class="menu-item-image">
+								<img src="img/menu/pasta.svg" alt="Classic Breakfast Platter" loading="lazy" width="300" height="200">
+							</div>
+							<div class="menu-item-content">
+								<h3 class="menu-item-title">Classic Breakfast</h3>
+								<p class="menu-item-description">Eggs, bacon, toast and fresh fruit</p>
+								<span class="menu-item-price">$12.99</span>
+								<a href="order.html" class="btn menu-btn">Order Now</a>
+							</div>
+						</article>
+						
+						<article class="menu-item" data-category="breakfast">
+							<div class="menu-item-image">
+								<img src="img/menu/salad.svg" alt="Avocado Toast with Poached Eggs" loading="lazy" width="300" height="200">
+							</div>
+							<div class="menu-item-content">
+								<h3 class="menu-item-title">Avocado Toast</h3>
+								<p class="menu-item-description">Sourdough with avocado and poached eggs</p>
+								<span class="menu-item-price">$14.99</span>
+								<a href="order.html" class="btn menu-btn">Order Now</a>
+							</div>
+						</article>
+						
+						<article class="menu-item" data-category="breakfast">
+							<div class="menu-item-image">
+								<img src="img/menu/steak.svg" alt="Belgian Waffles with Berries" loading="lazy" width="300" height="200">
+							</div>
+							<div class="menu-item-content">
+								<h3 class="menu-item-title">Belgian Waffles</h3>
+								<p class="menu-item-description">Served with fresh berries and maple syrup</p>
+								<span class="menu-item-price">$13.99</span>
+								<a href="order.html" class="btn menu-btn">Order Now</a>
+							</div>
+						</article>
+						
+						<article class="menu-item" data-category="breakfast">
+							<div class="menu-item-image">
+								<img src="img/menu/pasta.svg" alt="Breakfast Burrito" loading="lazy" width="300" height="200">
+							</div>
+							<div class="menu-item-content">
+								<h3 class="menu-item-title">Breakfast Burrito</h3>
+								<p class="menu-item-description">Scrambled eggs, cheese, and vegetables</p>
+								<span class="menu-item-price">$11.99</span>
+								<a href="order.html" class="btn menu-btn">Order Now</a>
+							</div>
+						</article>
+					</div>
+					
+					<div class="view-more-container text-center">
+						<a href="menu.html" class="btn secondary-btn">View Full Menu</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="booking" class="booking-section">
+			<div class="container">
+				<div class="section-header text-center animate-on-scroll">
+					<span class="section-tag">Book Table</span>
+					<h2 class="section-title">Opening Hours</h2>
+				</div>
+				
+				<div class="booking-content">
+					<div class="contact-info animate-on-scroll">
+						<div class="phone-container">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="phone-icon">
+							<path fill="#e67e22" d="M20,15.5C18.8,15.5 17.5,15.3 16.4,14.9C16.3,14.9 16.2,14.9 16.1,14.9C15.8,14.9 15.6,15 15.4,15.2L13.2,17.4C10.4,15.9 8,13.6 6.6,10.8L8.8,8.6C9.1,8.3 9.2,7.9 9,7.6C8.7,6.5 8.5,5.2 8.5,4C8.5,3.5 8,3 7.5,3H4C3.5,3 3,3.5 3,4C3,13.4 10.6,21 20,21C20.5,21 21,20.5 21,20V16.5C21,16 20.5,15.5 20,15.5M5,5H6.5C6.6,5.9 6.8,6.8 7,7.6L5.8,8.8C5.4,7.6 5.1,6.3 5,5M19,19C17.7,18.9 16.4,18.6 15.2,18.2L16.4,17C17.2,17.2 18.1,17.4 19,17.4V19Z" />
+							</svg>
+							<div class="phone-text">
+								<span class="call-label">Call Now</span>
+								<a href="tel:+2349134990508" class="phone-number">+234 913 499 0508</a>
+							</div>
+						</div>
+						
+						<div class="hours-container">
+							<div class="hours-item">
+								<span class="days">Monday to Thursday</span>
+								<span class="times">9:00am - 10:00pm</span>
+							</div>
+							<div class="hours-item">
+								<span class="days">Friday to Sunday</span>
+								<span class="times">11:00am - 8:00pm</span>
+							</div>
+						</div>
+						
+						<div class="booking-buttons">
+							<a href="booking.html" class="btn primary-btn">Reserve a Table</a>
+							<a href="contact.html" class="btn outline-btn">Contact Us</a>
+						</div>
+					</div>
+					
+					<div class="video-container animate-on-scroll">
+						<video class="restaurant-video lazy-video" poster="#" controls preload="none" width="640" height="360">
+							<source src="#" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+						<p class="video-caption">Take a tour of our restaurant</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="testimonials" class="testimonials-section">
+			<div class="container">
+				<div class="section-header text-center">
+					<span class="section-tag">Testimonials</span>
+					<h2 class="section-title">Customers Say</h2>
+				</div>
+				
+				<div class="testimonials-slider" id="testimonialSlider">
+					<div class="testimonial-item" data-slide="0">
+						<div class="testimonial-content">
+							<div class="rating">
+								<svg xmlns="http://www.w3.org/2000/svg" width="120" height="24" viewBox="0 0 120 24" class="rating-stars">
+							<style>
+								.star { fill: #f39c12; }
+							</style>
+							<path class="star" d="M12,2L14.4,9.2H22L16,13.8L18.4,21L12,16.4L5.6,21L8,13.8L2,9.2H9.6L12,2Z"/>
+							<path class="star" d="M36,2L38.4,9.2H46L40,13.8L42.4,21L36,16.4L29.6,21L32,13.8L26,9.2H33.6L36,2Z"/>
+							<path class="star" d="M60,2L62.4,9.2H70L64,13.8L66.4,21L60,16.4L53.6,21L56,13.8L50,9.2H57.6L60,2Z"/>
+							<path class="star" d="M84,2L86.4,9.2H94L88,13.8L90.4,21L84,16.4L77.6,21L80,13.8L74,9.2H81.6L84,2Z"/>
+							<path class="star" d="M108,2L110.4,9.2H118L112,13.8L114.4,21L108,16.4L101.6,21L104,13.8L98,9.2H105.6L108,2Z"/>
+						</svg>
+							</div>
+							<blockquote class="testimonial-text">
+								<p>The food at Cuisine Restaurant is absolutely exceptional! Every dish is prepared with such care and attention to detail. The atmosphere is elegant yet comfortable, and the staff is attentive without being intrusive. I highly recommend their signature dishes!</p>
+							</blockquote>
+						</div>
+						<div class="testimonial-author">
+							<img src="img/testimonial-1.svg" alt="John Smith" class="author-image" width="60" height="60" loading="lazy">
+							<div class="author-info">
+								<h3 class="author-name">John Smith</h3>
+								<p class="author-title">Art Director</p>
+							</div>
+						</div>
+					</div>
+					
+					<div class="testimonial-controls">
+						<button class="prev-btn" id="testimonialPrev" aria-label="Previous testimonial">&lt;</button>
+						<div class="testimonial-dots">
+							<span class="dot active" data-slide="0"></span>
+							<span class="dot" data-slide="1"></span>
+							<span class="dot" data-slide="2"></span>
+						</div>
+						<button class="next-btn" id="testimonialNext" aria-label="Next testimonial">&gt;</button>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<footer class="site-footer">
+			<div class="container">
+				<div class="footer-content">
+					<div class="footer-column">
+						<a href="index.html" class="footer-logo">
+							<img src="img/logo.svg" alt="Cuisine Restaurant Logo" width="150" height="50" loading="lazy">
+						</a>
+						<p class="footer-description">Experience the finest dining with our carefully crafted menu featuring locally sourced ingredients and innovative recipes.</p>
+						<div class="social-links">
+							<a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+							<a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+							<a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+							<a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+						</div>
+					</div>
+					
+					<div class="footer-column">
+						<h3 class="footer-heading">Quick Links</h3>
+						<ul class="footer-links">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="about.html">About Us</a></li>
+							<li><a href="menu.html">Menu</a></li>
+							<li><a href="booking.html">Reservations</a></li>
+							<li><a href="contact.html">Contact</a></li>
+						</ul>
+					</div>
+					
+					<div class="footer-column">
+						<h3 class="footer-heading">Contact Us</h3>
+						<address class="contact-info">
+							<p><i class="fas fa-map-marker-alt"></i> 123 Restaurant Street, City, Country</p>
+							<p><i class="fas fa-phone-alt"></i> <a href="tel:+2349134990508">+234 913 499 0508</a></p>
+							<p><i class="fas fa-envelope"></i> <a href="mailto:info@cuisinerestaurant.com">info@cuisinerestaurant.com</a></p>
+						</address>
+					</div>
+					
+					<div class="footer-column">
+						<h3 class="footer-heading">Newsletter</h3>
+						<p>Subscribe to our newsletter for special offers and updates</p>
+						<form class="newsletter-form" action="#" method="post">
+							<input type="email" name="email" placeholder="Your email address" required>
+							<button type="submit" class="btn">Subscribe</button>
+						</form>
+					</div>
+				</div>
+				
+				<div class="footer-bottom">
+					<p>&copy; 2023 Cuisine Restaurant. All rights reserved.</p>
+					<p>Designed with <span class="heart">♥</span> for good food</p>
+				</div>
+			</div>
+		</footer>
+		
+		<!-- JavaScript -->    
+<script src="js/main.js"></script>
+</body>
+</html>
+	
