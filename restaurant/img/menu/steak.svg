@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="150" viewBox="0 0 200 150">
+  <style>
+    .plate { fill: #f5f5f5; stroke: #e0e0e0; stroke-width: 2; }
+    .steak { fill: #a94442; stroke: #8c3a3a; stroke-width: 2; }
+    .grill-mark { fill: #5d2f2e; }
+    .herb { fill: #27ae60; }
+    .potato { fill: #f9e79f; stroke: #f7dc6f; stroke-width: 1; }
+    .sauce { fill: #5d4037; fill-opacity: 0.7; }
+  </style>
+  <g>
+    <!-- Plate -->
+    <ellipse class="plate" cx="100" cy="100" rx="80" ry="40"/>
+    
+    <!-- Steak -->
+    <path class="steak" d="M60,90 C70,80 100,75 130,80 C140,85 145,95 140,105 C130,115 100,120 70,115 C60,110 55,100 60,90 Z"/>
+    
+    <!-- Grill Marks -->
+    <line class="grill-mark" x1="70" y1="85" x2="130" y2="90" stroke="#5d2f2e" stroke-width="2"/>
+    <line class="grill-mark" x1="70" y1="95" x2="130" y2="100" stroke="#5d2f2e" stroke-width="2"/>
+    <line class="grill-mark" x1="70" y1="105" x2="130" y2="110" stroke="#5d2f2e" stroke-width="2"/>
+    
+    <!-- Herbs -->
+    <circle class="herb" cx="85" cy="90" r="2"/>
+    <circle class="herb" cx="115" cy="95" r="2"/>
+    <circle class="herb" cx="100" cy="105" r="2"/>
+    
+    <!-- Potatoes -->
+    <ellipse class="potato" cx="50" cy="110" rx="10" ry="7"/>
+    <ellipse class="potato" cx="150" cy="90" rx="10" ry="7"/>
+    
+    <!-- Sauce -->
+    <ellipse class="sauce" cx="120" cy="110" rx="15" ry="8"/>
+  </g>
+</svg>
