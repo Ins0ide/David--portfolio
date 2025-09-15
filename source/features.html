@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Explore Source's powerful features designed to help creators streamline their workflow and boost productivity.">
+    <meta name="keywords" content="Source, features, creator tools, productivity, user profiles, collaboration">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Features – Source</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <style>
+        .feature-section {
+            padding: 80px 48px;
+            background: #fff;
+            margin-bottom: 24px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+            margin-top: 48px;
+        }
+        
+        .feature-card {
+            background: #f8f8fa;
+            border-radius: 8px;
+            padding: 32px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+        }
+        
+        .feature-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 64px;
+            height: 64px;
+            background: #6c63ff;
+            color: white;
+            border-radius: 16px;
+            margin-bottom: 24px;
+            font-size: 24px;
+        }
+        
+        .feature-card h3 {
+            margin: 0 0 16px 0;
+            font-size: 1.5rem;
+        }
+        
+        .feature-hero {
+            background: linear-gradient(135deg, #6c63ff 0%, #5548c8 100%);
+            color: white;
+            padding: 120px 48px;
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        
+        .feature-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 24px;
+        }
+        
+        .feature-hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background: #fff;
+            color: #6c63ff;
+            border: none;
+            border-radius: 24px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-top: 32px;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+        
+        .testimonial {
+            background: #f8f8fa;
+            padding: 64px 48px;
+            text-align: center;
+            margin: 48px 0;
+        }
+        
+        .testimonial-content {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.3rem;
+            font-style: italic;
+            color: #444;
+        }
+        
+        .testimonial-author {
+            margin-top: 24px;
+            font-weight: 600;
+        }
+        
+        @media (max-width: 768px) {
+            .feature-hero {
+                padding: 80px 24px;
+            }
+            
+            .feature-hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .feature-section {
+                padding: 48px 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="source.htm"><img src="img/Source.webp" alt="Source company logo"></a>
+        <nav class="bg-white shadow-sm fixed w-full z-10">
+            <div class="desktop-menu">
+                <ul>
+                    <li><a href="features.html" class="active">Features</a></li>
+                    <li><a href="analytics.html">Analytics</a></li>
+                    <li><a href="security.html">Security</a></li>
+                    <li><a href="customization.html">Customization</a></li>
+                </ul>
+            </div>
+            <div class="mobile-menu-button">
+                <button id="menu-btn" class="text-gray-700">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white pb-3 px-4">
+            <a href="features.html" class="block py-2 text-gray-700 hover:text-blue-600 transition active">Features</a>
+            <a href="analytics.html" class="block py-2 text-gray-700 hover:text-blue-600 transition">Analytics</a>
+            <a href="security.html" class="block py-2 text-gray-700 hover:text-blue-600 transition">Security</a>
+            <a href="customization.html" class="block py-2 text-gray-700 hover:text-blue-600 transition">Customization</a>
+            <a href="contact.html" class="block py-2 text-gray-700 hover:text-blue-600 transition header-btn-mobile">Contact</a>
+        </div>
+        </nav>
+    </header>
+    
+    <section class="feature-hero">
+        <h1>Powerful Features for Creators</h1>
+        <p>Discover the tools that will transform your creative workflow and help you achieve more.</p>
+        <a href="contact.html" class="cta-button">Get Started</a>
+    </section>
+    
+    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 24px;">
+        <section class="feature-section" id="profiles">
+            <h2>User Profiles</h2>
+            <p>Create and manage your personalized profile to connect with other creators and showcase your work.</p>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <span class="feature-icon"><i class="fa-solid fa-id-card"></i></span>
+                    <h3>Custom Profiles</h3>
+                    <p>Create a unique profile that showcases your work, skills, and creative journey.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="feature-icon"><i class="fa-solid fa-users"></i></span>
+                    <h3>Community Connection</h3>
+                    <p>Connect with like-minded creators and build your professional network.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="feature-icon"><i class="fa-solid fa-folder-open"></i></span>
+                    <h3>Portfolio Showcase</h3>
+                    <p>Display your best work in a beautiful, customizable portfolio that gets noticed.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="feature-section">
+            <h2>Collaboration Tools</h2>
+            <p>Work seamlessly with teams and partners to bring your creative visions to life.</p>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <span class="feature-icon"><i class="fa-solid fa-comments"></i></span>
+                    <h3>Real-time Messaging</h3>
+                    <p>Communicate instantly with team members to keep projects moving forward.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="feature-icon"><i class="fa-solid fa-share-nodes"></i></span>
+                    <h3>File Sharing</h3>
+                    <p>Share assets and documents securely with collaborators and clients.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="feature-icon"><i class="fa-solid fa-calendar-check"></i></span>
+                    <h3>Project Management</h3>
+                    <p>Track progress, set milestones, and manage deadlines with intuitive tools.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="feature-section">
+            <h2>Creative Tools</h2>
+            <p>Access powerful tools designed specifically for creative professionals.</p>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <span class="feature-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
+                    <h3>Design Assistant</h3>
+                    <p>Get AI-powered suggestions to enhance your creative work and overcome blocks.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="feature-icon"><i class="fa-solid fa-layer-group"></i></span>
+                    <h3>Asset Library</h3>
+                    <p>Organize and access your creative assets from anywhere, anytime.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="feature-icon"><i class="fa-solid fa-code"></i></span>
+                    <h3>Code Integration</h3>
+                    <p>Seamlessly integrate with your favorite development tools and platforms.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="testimonial">
+            <div class="testimonial-content">
+                "Source's features have completely transformed how I work. The collaboration tools alone have saved my team countless hours and helped us deliver better results for our clients."
+            </div>
+            <div class="testimonial-author">— Sarah Johnson, Creative Director</div>
+        </section>
+    </div>
+    
+    <footer>
+        <section class="newsletter">
+            <h3>Subscribe to our Newsletter</h3>
+            <form action="subscribe.html" method="post" class="newsletter-form">
+                <label for="newsletter-email" class="visually-hidden">Email address</label>
+                <input type="email" id="newsletter-email" name="email" placeholder="Enter your email" required autocomplete="email">
+                <button type="submit">Subscribe</button>
+            </form>
+            <p class="newsletter-note">Get updates and news delivered to your inbox.</p>
+        </section>
+        <p>&copy; 2023 Source. All rights reserved.</p>
+        <nav>
+            <a href="privacy.html">Privacy Policy</a> |
+            <a href="terms.html">Terms of Service</a>
+        </nav>
+    </footer>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
