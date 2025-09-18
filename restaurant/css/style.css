@@ -393,10 +393,6 @@ section {
     font-size: var(--fs-sm);
 }
 
-.heart {
-    color: var(--error);
-}
-
 /******************************************
 /******************************************
 /* ADDITIONAL STYLES
@@ -626,7 +622,7 @@ main {
     font-weight: 700;
     color: var(--dark);
     margin-bottom: var(--spacing-md);
-    line-height: 1.2;
+    
 }
 
 .hero-title span {
@@ -650,6 +646,12 @@ main {
 .search-form {
     display: flex;
     width: 100%;
+}
+
+input {
+    height: 30px;
+    border: none;
+    outline: none;
 }
 
 .search-input {
@@ -688,7 +690,7 @@ main {
 }
 
 .stat-item {
-    text-align: center;
+    text-align: left;
 }
 
 .stat-value {
