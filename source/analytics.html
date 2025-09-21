@@ -28,14 +28,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+    .mobile-menu-button {
+        display: none;
+    }
+    
+    #menu-btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 8px;
+        border-radius: 4px;
+    }
+
+    #menu-btn:hover {
+        background-color: #f0f0f0;
+    }
+    @media (max-width: 700px) {
+        .mobile-menu-button {
+            display: block;
+            position: absolute;
+            top: 32px;
+            right: 16px;
+        }
+    }
+    </style>
 </head>
 <body class="font-sans bg-gray-50">
     <!-- Header -->
-    <header class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+    <header class="bg-gradient-to-r backdrop-blur-md bg-white/30 shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 flex items-center justify-between">
             <a href="source.htm" class="flex items-center">
-                <img src="img/logo.png" alt="Source Logo" class="h-10">
-                <span class="ml-3 text-xl font-bold text-gray-800">Source</span>
+                <img src="img/Source.webp" alt="Source Logo" class="h-8">
             </a>
             
             <!-- Desktop Navigation -->
@@ -50,7 +74,7 @@
             
             <!-- Mobile Menu Button -->
             <button class="md:hidden flex items-center" id="mobile-menu-button">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" id="menu-btn" class="h-10 w-10 text-gray-700 text-2xl" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
             </button>
@@ -59,12 +83,12 @@
         <!-- Mobile Menu -->
         <div class="md:hidden hidden bg-white border-t" id="mobile-menu">
             <div class="container mx-auto px-4 py-2 flex flex-col space-y-2">
-                <a href="source.htm" class="block py-2 text-gray-700 hover:text-blue-600 transition">Home</a>
-                <a href="features.html" class="block py-2 text-gray-700 hover:text-blue-600 transition">Features</a>
-                <a href="analytics.html" class="block py-2 text-blue-600 font-medium">Analytics</a>
-                <a href="security.html" class="block py-2 text-gray-700 hover:text-blue-600 transition">Security</a>
-                <a href="customization.html" class="block py-2 text-gray-700 hover:text-blue-600 transition">Customization</a>
-                <a href="contact.html" class="block py-2 text-gray-700 hover:text-blue-600 transition">Contact</a>
+                <a href="source.htm" class="block py-2 text-gray-700 hover:text-purple-600 transition">Home</a>
+                <a href="features.html" class="block py-2 text-gray-700 hover:text-purple-600 transition">Features</a>
+                <a href="analytics.html" class="block py-2 text-purple-600 font-medium">Analytics</a>
+                <a href="security.html" class="block py-2 text-gray-700 hover:text-purple-600 transition">Security</a>
+                <a href="customization.html" class="block py-2 text-gray-700 hover:text-purple-600 transition">Customization</a>
+                <a href="contact.html" class="block py-2 text-gray-700 hover:text-purple-600 transition header-btn-mobile">Contact</a>
             </div>
         </div>
     </header>
@@ -427,12 +451,6 @@
     </footer>
 
     <!-- JavaScript -->
-    <script src="js/main.js"></script>
-    <script>
-        // Mobile menu toggle
-        document.getElementById('mobile-menu-button').addEventListener('click', function() {
-            document.getElementById('mobile-menu').classList.toggle('hidden');
-        });
-    </script>
+    <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
