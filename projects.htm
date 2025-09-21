@@ -7,7 +7,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css" />
-    <script type="text/javascript" src="js/main.js"></script>
     <style>
         .gradient-text {
             background: linear-gradient(90deg, #3b82f6, #8b5cf6);
@@ -30,23 +29,69 @@
         .animate {
             opacity: 1;
             transform: translateY(0);
-        }                        
+        }
+
+        /* Enhanced menu animations */
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        /* Mobile menu toggle animation */
+        #menu-btn {
+            position: relative;
+            z-index: 20;
+            transition: transform 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+        }
+        #menu-btn.open i {
+            transform: rotate(90deg);
+        }
+        
+        /* Mobile menu animation */
+        #mobile-menu {
+            transition: opacity 0.4s ease, transform 0.4s ease, max-height 0.4s ease;
+            transform-origin: top center;
+        }
+        #mobile-menu.show {
+            opacity: 1;
+            transform: translateY(0);
+            max-height: 300px;
+        }
+        #mobile-menu.hide {
+            opacity: 0;
+            transform: translateY(-20px);
+            max-height: 0;
+        }
+
     </style>
 </head>
 <body class="bg-gray-50 font-sans">
     <!-- Navigation -->
-    <nav class="bg-white shadow-sm fixed w-full z-10">
+    <nav class="bg-white backdrop-blur-md bg-white/30 shadow-sm fixed w-full z-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
                 <div class="flex items-center">
                     <a href="DJay.htm"><span class="text-xl font-bold gradient-text">D Jay</span></a>
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="DJay.htm" class="text-gray-700 hover:text-blue-600 transition">Home</a>
-                    <a href="DJay.htm#about" class="text-gray-700 hover:text-blue-600 transition">About</a>
-                    <a href="DJay.htm#skills" class="text-gray-700 hover:text-blue-600 transition">Skills</a>
-                    <a href="DJay.htm#work" class="text-gray-700 hover:text-blue-600 transition">Work</a>
-                    <a href="DJay.htm#contact" class="text-gray-700 hover:text-blue-600 transition">Contact</a>
+                    <a href="DJay.htm" class="text-gray-700 hover:text-blue-600 transition nav-link">Home</a>
+                    <a href="DJay.htm#about" class="text-gray-700 hover:text-blue-600 transition nav-link">About</a>
+                    <a href="DJay.htm#skills" class="text-gray-700 hover:text-blue-600 transition nav-link">Skills</a>
+                    <a href="DJay.htm#work" class="text-gray-700 hover:text-blue-600 transition nav-link">Work</a>
+                    <a href="DJay.htm#contact" class="text-gray-700 hover:text-blue-600 transition nav-link">Contact</a>
                 </div>
                 <div class="md:hidden flex items-center">
                     <button id="menu-btn" class="text-gray-700">
@@ -56,12 +101,12 @@
             </div>
         </div>
         <!-- Mobile menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white pb-3 px-4">
-            <a href="DJay.htm" class="block py-2 text-gray-700 hover:text-blue-600 transition">Home</a>
-            <a href="DJay.htm#about" class="block py-2 text-gray-700 hover:text-blue-600 transition">About</a>
-            <a href="DJay.htm#skills" class="block py-2 text-gray-700 hover:text-blue-600 transition">Skills</a>
-            <a href="DJay.htm#work" class="block py-2 text-gray-700 hover:text-blue-600 transition">Work</a>
-            <a href="DJay.htm#contact" class="block py-2 text-gray-700 hover:text-blue-600 transition">Contact</a>
+        <div id="mobile-menu" class="hidden md:hidden pb-3 px-4">
+            <a href="DJay.htm" class="block py-2 text-gray-700 hover:text-blue-600 transition nav-link">Home</a>
+            <a href="DJay.htm#about" class="block py-2 text-gray-700 hover:text-blue-600 transition nav-link">About</a>
+            <a href="DJay.htm#skills" class="block py-2 text-gray-700 hover:text-blue-600 transition nav-link">Skills</a>
+            <a href="DJay.htm#work" class="block py-2 text-gray-700 hover:text-blue-600 transition nav-link">Work</a>
+            <a href="DJay.htm#contact" class="block py-2 text-gray-700 hover:text-blue-600 transition nav-link">Contact</a>
         </div>
     </nav>
     <!-- Work Section -->
@@ -154,25 +199,6 @@
                         </div>
                     </div>
                 </div>                
-
-                <!-- Project 4 -->
-                <!-- <div class="project-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300 animate-on-scroll">
-                    <div class="h-48 bg-gradient-to-r from-green-100 to-teal-100 flex items-center justify-center">
-                        <i class="fas fa-mobile-alt text-5xl text-green-500"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2 text-gray-800">Mobile App Dashboard</h3>
-                        <p class="text-gray-600 mb-4">
-                            Analytics dashboard for a fitness tracking app with interactive charts and data visualization.
-                        </p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-2 rounded-full">React</span>
-                            <span class="bg-yellow-100 text-yellow-800 text-xs px-3 py-2 rounded-full">D3.js</span>
-                            <span class="bg-red-100 text-red-800 text-xs px-3 py-2 rounded-full">Firebase</span>
-                            <a href=""><span class="view font-bold text-purple-800 bg-gray-100 px-10 py-1 rounded-lg">View</span></a>                        </div></a>
-                    </div>
-                </div> -->
-
             </div>
         </div>
     </section>
@@ -207,16 +233,10 @@
             </div>
         </div>
     </footer>
+    <!-- External Scripts -->
+    <script type="text/javascript" src="js/main.js"></script>
     <!-- Scroll Animation Script -->
     <script>
-        // Mobile menu toggle
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-        
         // Scroll animation
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -230,6 +250,7 @@
         document.querySelectorAll('.animate-on-scroll').forEach(element => {
             observer.observe(element);
         });
+        
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
@@ -245,7 +266,8 @@
                     });
                     
                     // Close mobile menu if open
-                    if (!mobileMenu.classList.contains('hidden')) {
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
                         mobileMenu.classList.add('hidden');
                     }
                 }
