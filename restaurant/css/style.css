@@ -594,15 +594,36 @@ button {
 .headerUl a {
      text-decoration: none;
 }
+
 /* Main Content */
 main {
-    background-color: var(--gray-light);
+    /* background-color: var(--gray-light); */
+    background-image: url("restaurant.jpg");
+    height: 500px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-shadow: 2px 2px 4px var(--black);
+    text-decoration: 1px var(--black);
+    color: var(--white);
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+        right: 0;
+        height: 100px;
+        background: linear-gradient(to bottom, transparent, var(--gray-dark));
+        /* the fade effect should be fixed */
+        /* z-index: 1; */
+    }
 }
 
 /* Hero Section */
 .hero-section {
     position: relative;
-    background-color: var(--secondary-light);
+    /* background-color: var(--secondary-light); */
     padding: var(--spacing-3xl) 0;
     overflow: hidden;
 }
@@ -620,7 +641,7 @@ main {
     font-family: var(--font-secondary);
     font-size: var(--fs-4xl);
     font-weight: 700;
-    color: var(--dark);
+    /* color: var(--dark); */
     margin-bottom: var(--spacing-md);
     
 }
@@ -631,7 +652,7 @@ main {
 
 .hero-subtitle {
     font-size: var(--fs-lg);
-    color: var(--gray-dark);
+    /* color: var(--gray-dark); */
     margin-bottom: var(--spacing-xl);
     max-width: 600px;
 }
@@ -652,6 +673,7 @@ input {
     height: 30px;
     border: none;
     outline: none;
+    border-radius: 10px;
 }
 
 .search-input {
@@ -702,7 +724,7 @@ input {
 
 .stat-label {
     font-size: var(--fs-sm);
-    color: var(--gray-dark);
+    /* color: var(--gray-dark); */
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -725,17 +747,23 @@ input {
 /* About Section */
 .about-section {
     background-color: var(--white);
+    padding: var(--spacing-2xl) 0;
 }
 
-.about-container {
+.about-section .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--spacing-2xl);
     align-items: center;
 }
 
+.about-content {
+    padding-right: var(--spacing-xl);
+}
+
 .about-text {
     max-width: 500px;
+    margin-bottom: var(--spacing-lg);
 }
 
 .about-title {
@@ -757,16 +785,21 @@ input {
     border-radius: var(--radius-lg);
     overflow: hidden;
     box-shadow: var(--shadow-md);
+    height: 100%;
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.about-image img {
+.about-image img, .about-image svg {
     width: 100%;
     height: auto;
     display: block;
     transition: transform var(--transition-normal);
 }
 
-.about-image:hover img {
+.about-image:hover img, .about-image:hover svg {
     transform: scale(1.05);
 }
 
@@ -1192,26 +1225,6 @@ input {
         opacity: 1;
     }
     
-    .hero-section {
-        padding: var(--spacing-xl) 0;
-    }
-    
-    .hero-title {
-        font-size: var(--fs-2xl);
-    }
-    
-    .hero-subtitle {
-        font-size: var(--fs-md);
-    }
-    
-    .hero-stats {
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-    
-    .section-title {
-        font-size: var(--fs-2xl);
-    }
     
     .menu-header {
         flex-direction: column;
@@ -1245,7 +1258,7 @@ input {
         --fs-2xl: 1.5rem;
         --fs-xl: 1.25rem;
     }
-    
+
     .menu-items {
         grid-template-columns: 1fr;
     }
@@ -1294,4 +1307,3 @@ input {
         text-align: center;
     }
 }
-
