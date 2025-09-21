@@ -37,4 +37,4 @@ if (menuBtn && mobileMenu) {
             }, 300); // Match transition duration
         }
     });
-}
+} 
